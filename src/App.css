@@ -142,6 +142,10 @@ main {
   transition-delay: 200ms;
 }
 
+.title {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
 /*mobile*/
 @media only screen and (max-width: 600px) {
   /*Nav bar*/
@@ -173,6 +177,7 @@ main {
     padding: 0;
     margin-left: 20%;
     font-size: 4rem;
+    font-family: Brush Script MT;
     width: 20rem;
     border-right: 0.1em solid lightskyblue;
   }
@@ -213,6 +218,7 @@ main {
     padding: 0;
     margin: 0;
     font-size: 5rem;
+    font-family: Brush Script MT;
     width: 25rem;
     border-right: 0.1em solid lightskyblue;
   }
@@ -302,5 +308,55 @@ main {
     display: grid;
     grid-template-columns: 43% 43%;
     gap: 5%;
+  }
+}
+
+/*Work page*/
+.workMain {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.workCard {
+  width: 80%;
+  padding: 2rem;
+  margin-left: 1rem;
+  border-radius: 16px;
+  background: var(--bg-primary);
+  box-shadow: -1rem 0 3rem #000;
+  transition: 100ms;
+}
+
+.entrance {
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.workCard:hover {
+  transform: scale(1.1);
+}
+.entrance:hover ~ .entrance {
+  transform: translateY(3rem);
+}
+.entrance:not(:first-child) {
+  margin-top: -3rem;
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(1.4) translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .workMain {
+    width: 70%;
+  }
+  .workCard {
+    width: 100%;
   }
 }
