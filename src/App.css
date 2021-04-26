@@ -114,24 +114,29 @@ main {
 /*transition styles*/
 .page-enter {
   opacity: 0;
+  transform: scale(1.2);
 }
 
 .page-enter-active {
   opacity: 1;
-  transition: opacity 600ms;
+  transform: scale(1);
+  transition: opacity 600ms, transform 300ms;
 }
 
 .page-exit {
   opacity: 1;
+  transform: scale(1);
 }
 
 .page-exit-active {
   opacity: 0;
-  transition: opacity 600ms;
+  transform: scale(0.8);
+  transition: opacity 600ms, transform 300ms;
 }
 
 /*mobile*/
 @media only screen and (max-width: 600px) {
+  /*Nav bar*/
   .navbar {
     bottom: 0;
     width: 100vw;
@@ -154,11 +159,30 @@ main {
   main {
     margin: 0;
   }
+
+  /*Home*/
+  .name {
+    padding: 0;
+    margin-left: 20%;
+    font-size: 4rem;
+    width: 20rem;
+    border-right: 0.1em solid lightskyblue;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
 }
 
 /*large screens*/
 @media only screen and (min-width: 600px) {
-  .container {
+  /*navbar*/
+  .page {
     margin-left: 6rem;
   }
   .navbar {
@@ -174,5 +198,42 @@ main {
   .navbar:hover .link-text {
     display: inline;
     transition: opacity 300ms;
+  }
+
+  /*Home*/
+  .name {
+    padding: 0;
+    margin: 0;
+    font-size: 5rem;
+    width: 25rem;
+    border-right: 0.1em solid lightskyblue;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 30%;
+    }
+  }
+}
+
+/*Home page typing animation*/
+.animated-home .name {
+  overflow: hidden;
+  border-right: 0.1em solid lightskyblue;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.9s step-end 6;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: lightskyblue;
   }
 }

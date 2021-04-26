@@ -9,14 +9,23 @@ const home_style = {
   flexDirection: "column",
 };
 
-const name_style = { padding: 0, margin: 0, marginLeft: 20, fontSize: "5rem" };
-
-const title_style = { marginLeft: "10rem", fontSize: "2rem" };
 export default function Home() {
+  const [animate, setAnimate] = useState(true);
+
+  useEffect(() => {
+    if (window.sessionStorage.getItem("firstLoadDone") === null) {
+      setAnimate(true);
+      window.sessionStorage.setItem("firstLoadDone", 1);
+    } else {
+      setAnimate(false);
+    }
+  }, [animate]);
+
   return (
-    <div className="home" style={home_style}>
-      <p style={name_style}>Humaid M. Agowun</p>
-      <p style={title_style}>Developer, Student, Researcher</p>
+    <div className={animate ? "animated-home" : "home"} style={home_style}>
+      <span className="name">Humaid M.</span>
+      <span className="name">Agowun</span>
+      <p className="title">Developer, Student, Researcher</p>
     </div>
   );
 }

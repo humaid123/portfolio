@@ -12,45 +12,45 @@ import {
 
 export default function NavBar() {
   return (
-    <nav class="navbar">
-      <ul class="navbar-nav">
-        <li class="logo">
+    <nav className="navbar">
+      <ul className="navbar-nav">
+        <li className="logo">
           <FaGreaterThan />
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link className="nav-link" to="/">
             <FaHome className="icon" />
-            <span class="link-text">Home</span>
+            <span className="link-text">Home</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/skills">
             <FaCode className="icon" />
-            <span class="link-text">Skills</span>
+            <span className="link-text">Skills</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/work">
             <FaBriefcase className="icon" />
-            <span class="link-text">Work Experience</span>
+            <span className="link-text">Work Experience</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/projects">
             <FaLightbulb className="icon" />
-            <span class="link-text">Projects</span>
+            <span className="link-text">Projects</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/education">
             <FaFeatherAlt className="icon" />
-            <span class="link-text">Education</span>
+            <span className="link-text">Education</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/contacts">
             <FaShareAlt className="icon" />
-            <span class="link-text">Contacts</span>
+            <span className="link-text">Contacts</span>
           </Link>
         </li>
       </ul>
