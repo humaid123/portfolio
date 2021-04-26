@@ -15,9 +15,14 @@ body {
   padding: 0;
 }
 
+em {
+  font-weight: bold;
+  color: lightskyblue;
+}
+
 /*styling the scrollbar*/
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.2rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -37,6 +42,7 @@ main {
   position: fixed; /*always follow user*/
   background: var(--bg-primary);
   transition: width 100ms;
+  z-index: 5;
 }
 
 .navbar-nav {
@@ -121,6 +127,7 @@ main {
   opacity: 1;
   transform: scale(1);
   transition: opacity 600ms, transform 300ms;
+  transition-delay: 200ms;
 }
 
 .page-exit {
@@ -132,6 +139,7 @@ main {
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 600ms, transform 300ms;
+  transition-delay: 200ms;
 }
 
 /*mobile*/
@@ -235,5 +243,64 @@ main {
   }
   50% {
     border-color: lightskyblue;
+  }
+}
+
+/*skills pages animation*/
+
+.skillsRow {
+  display: block;
+  animation-name: animateIn;
+  animation-duration: 1s;
+  animation-delay: calc(var(--animation-order) * 100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.skillsRow + .skillsRow {
+  margin-top: 16px;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    width: 0;
+    transform: scale(1.4) translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.skillsCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  padding-top: 1%;
+
+  border-radius: 16px;
+  box-shadow: -1rem 0 3rem #000;
+}
+
+.skillsAdditionalInfo {
+  border-radius: 16px;
+  padding: 2%;
+  width: 100%;
+  font-size: large;
+}
+
+.skillsLayout {
+  margin-bottom: 5.5rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .skillsLayout {
+    display: grid;
+    grid-template-columns: 43% 43%;
+    gap: 5%;
   }
 }
