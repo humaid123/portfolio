@@ -54,7 +54,9 @@ function WebDevelopment() {
         <Row text="MERN" order={2} level="High" />
         <Row text="TypeScript" order={4} level="Medium" />
         <Row text="Sass" order={5} level="Medium" />
+        <Row text="webRTC" order={6} level="Introductory" />
         <Row text="Socket.io" order={6} level="High" />
+        <Row text="Three.js" order={5} level="Introductory" />
       </div>
     </div>
   );
@@ -65,7 +67,8 @@ function MachineLearning() {
     <div className="card unclickableCard">
       <h1>Data Analysis and Machine Learning</h1>
       <div>
-        <Row text="Numpy/Scipy" order={1} level="High" />
+        <Row text="Numpy" order={1} level="High" />
+        <Row text="Scipy" order={1} level="High" />
         <Row text="Pandas" order={2} level="High" />
         <Row text="Matplotlib" order={3} level="High" />
         <Row text="Scikit Learn" order={4} level="Medium" />
@@ -112,7 +115,7 @@ function Intro() {
 
 export default function Skills() {
   return (
-    <div>
+    <>
       <Intro />
       <div>
         <Languages />
@@ -120,6 +123,6 @@ export default function Skills() {
         <MachineLearning />
         <OtherSkills />
       </div>
-    </div>
+    </>
   );
 }

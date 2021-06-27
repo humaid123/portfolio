@@ -103,7 +103,7 @@ function Publications() {
 export default function MoreAboutMe() {
   const [showPublications, setShowPublications] = useState(false);
   return (
-    <div>
+    <>
       <div className="left">
         <div
           onClick={() => setShowPublications(false)}
@@ -119,6 +119,6 @@ export default function MoreAboutMe() {
         </div>
       </div>
       <div>{showPublications ? <Publications /> : <Education />}</div>
-    </div>
+    </>
   );
 }

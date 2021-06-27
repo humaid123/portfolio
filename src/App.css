@@ -216,6 +216,7 @@ main {
 .unclickableCard:hover {
   transform: scale(1);
   border: 1px solid lightskyblue;
+  cursor: default;
 }
 
 /*card takes whole screen for small screens*/
@@ -225,15 +226,10 @@ main {
     width: 90%;
   }
 
+  /*Dont scale the cards on mobile*/
   .card:hover {
     transform: scale(1);
     cursor: pointer;
-  }
-
-  .unclickableCard:hover {
-    transform: scale(1);
-    border: 1px solid lightskyblue;
-    cursor: default;
   }
 }
 

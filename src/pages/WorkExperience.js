@@ -82,7 +82,7 @@ function SoftwareDevelopment() {
 export default function WorkExperience() {
   const [showResearch, setShowResearch] = useState(false);
   return (
-    <div className="workMain">
+    <>
       <div className="left">
         <div
           onClick={() => setShowResearch(false)}
@@ -100,6 +100,6 @@ export default function WorkExperience() {
       <div style={{ paddingTop: "5vh" }}>
         {showResearch ? <Research /> : <SoftwareDevelopment />}
       </div>
-    </div>
+    </>
   );
 }
