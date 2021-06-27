@@ -1,6 +1,5 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Contacts from "./pages/Contacts";
 import Projects from "./pages/Projects";
 import WorkExperience from "./pages/WorkExperience";
 import Skills from "./pages/Skills";
@@ -15,7 +14,6 @@ const routes = [
   { path: "/work", name: "Work Experience", Component: WorkExperience },
   { path: "/projects", name: "Projects", Component: Projects },
   { path: "/education", name: "Education", Component: Education },
-  { path: "/contacts", name: "Contacts", Component: Contacts },
 ];
 
 function App() {

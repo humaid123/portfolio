@@ -6,7 +6,6 @@ import {
   FaBriefcase,
   FaLightbulb,
   FaFeatherAlt,
-  FaShareAlt,
   FaGreaterThan,
 } from "react-icons/fa";
 
@@ -20,7 +19,7 @@ export default function NavBar() {
         <li className="nav-item">
           <Link className="nav-link" to="/">
             <FaHome className="icon" />
-            <span className="link-text">Home</span>
+            <span className="link-text">Contact</span>
           </Link>
         </li>
         <li className="nav-item">
@@ -45,12 +44,6 @@ export default function NavBar() {
           <Link className="nav-link" to="/education">
             <FaFeatherAlt className="icon" />
             <span className="link-text">Education</span>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/contacts">
-            <FaShareAlt className="icon" />
-            <span className="link-text">Contacts</span>
           </Link>
         </li>
       </ul>

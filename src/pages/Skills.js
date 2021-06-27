@@ -32,13 +32,14 @@ function Row(props) {
 
 function Languages() {
   return (
-    <div className="skillsCard">
+    <div className="card unclickableCard">
       <h1>Languages</h1>
       <div>
-        <Row text="JavaScript (ES6+)" order={1} level="High" />
+        <Row text="JavaScript" order={1} level="High" />
         <Row text="Python" order={2} level="High" />
-        <Row text="C++" order={3} level="Medium" />
+        <Row text="C/C++" order={3} level="Medium" />
         <Row text="Java" order={4} level="Introductory" />
+        <Row text="Fortran" order={2} level="High" />
       </div>
     </div>
   );
@@ -46,15 +47,14 @@ function Languages() {
 
 function WebDevelopment() {
   return (
-    <div className="skillsCard">
+    <div className="card unclickableCard">
       <h1>Web Development</h1>
       <div>
         <Row text="React" order={1} level="High" />
         <Row text="MERN" order={2} level="High" />
-        <Row text="jQuery" order={3} level="High" />
         <Row text="TypeScript" order={4} level="Medium" />
         <Row text="Sass" order={5} level="Medium" />
-        <Row text="Firebase" order={6} level="Introductory" />
+        <Row text="Socket.io" order={6} level="High" />
       </div>
     </div>
   );
@@ -62,7 +62,7 @@ function WebDevelopment() {
 
 function MachineLearning() {
   return (
-    <div className="skillsCard">
+    <div className="card unclickableCard">
       <h1>Data Analysis and Machine Learning</h1>
       <div>
         <Row text="Numpy/Scipy" order={1} level="High" />
@@ -77,9 +77,11 @@ function MachineLearning() {
 
 function OtherSkills() {
   return (
-    <div className="skillsCard">
+    <div className="card unclickableCard">
       <h1>Other Strong Skills</h1>
       <div>
+        <Row text="Github" order={1} level="High" />
+        <Row text="Linux" order={1} level="High" />
         <Row text="OOP" order={1} level="High" />
         <Row text="SQL" order={2} level="High" />
         <Row text="Matlab/Scilab" order={3} level="Medium" />
@@ -88,9 +90,9 @@ function OtherSkills() {
   );
 }
 
-function SoftSkills() {
+function Intro() {
   return (
-    <div className="skillsAdditionalInfo">
+    <div className="left">
       <h1>Skills</h1>
       <p>
         Strong <em>problem solving skills</em> being a Maths major and doing
@@ -102,7 +104,7 @@ function SoftSkills() {
       </p>
       <p>
         Strong <em>Time management skills</em> by keeping up high academic
-        performance while working, coding personal projects and researching.
+        performance while working, coding personal projects and doing research.
       </p>
     </div>
   );
@@ -110,9 +112,9 @@ function SoftSkills() {
 
 export default function Skills() {
   return (
-    <div style={{ width: "95%" }}>
-      <SoftSkills />
-      <div className="skillsLayout">
+    <div>
+      <Intro />
+      <div>
         <Languages />
         <WebDevelopment />
         <MachineLearning />

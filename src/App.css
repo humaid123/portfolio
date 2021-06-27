@@ -1,3 +1,4 @@
+/*add elements and emphasis*/
 :root {
   font-size: 16px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -9,8 +10,8 @@
 }
 
 body {
-  color: #ececec;
-  background-color: #23232e;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
 }
@@ -32,6 +33,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: lightskyblue;
 }
+/*end styling scrollbar*/
 
 /*nav bar styles*/
 main {
@@ -57,10 +59,6 @@ main {
 
 .nav-item {
   width: 100%;
-}
-
-.nav-item:last-child {
-  margin-top: auto;
 }
 
 .nav-link {
@@ -117,36 +115,29 @@ main {
   transform: rotate(-180deg);
 }
 
-/*transition styles*/
-.page-enter {
-  opacity: 0;
-  transform: scale(1.2);
+/*navbar on large screens display a text*/
+@media only screen and (min-width: 600px) {
+  /*navbar*/
+  .page {
+    margin-left: 6rem;
+  }
+  .navbar {
+    border-right: 3px solid lightskyblue;
+    top: 0;
+    width: 5rem;
+    height: 100vh; /*vh is size of viewport/browser window*/
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity 300ms;
+  }
 }
 
-.page-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 600ms, transform 300ms;
-  transition-delay: 200ms;
-}
-
-.page-exit {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.page-exit-active {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 600ms, transform 300ms;
-  transition-delay: 200ms;
-}
-
-.title {
-  margin-left: 3rem;
-  font-size: 1.5rem;
-}
-/*mobile*/
+/*navbar goes into the bottom for mobile screens*/
 @media only screen and (max-width: 600px) {
   /*Nav bar*/
   .navbar {
@@ -172,57 +163,142 @@ main {
     margin: 0;
   }
 
-  /*Home*/
-  .name {
-    padding: 0;
-    margin-left: 20%;
-    font-size: 4rem;
-    font-family: Brush Script MT;
-    width: 20rem;
-    border-right: 0.1em solid lightskyblue;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 70%;
-    }
+  /*add 5 rem to container so we can see last few lines*/
+  .container {
+    margin-bottom: 6rem;
   }
 }
 
-/*large screens*/
-@media only screen and (min-width: 600px) {
-  /*navbar*/
-  .page {
-    margin-left: 6rem;
-  }
-  .navbar {
-    border-right: 3px solid lightskyblue;
-    top: 0;
-    width: 5rem;
-    height: 100vh; /*vh is size of viewport/browser window*/
-  }
+/*end navbar styles*/
 
-  .navbar:hover {
-    width: 16rem;
-  }
-  .navbar:hover .link-text {
-    display: inline;
-    transition: opacity 300ms;
-  }
+/*transition styles*/
+.page-enter {
+  opacity: 0;
+  transform: scale(1.2);
+}
 
-  /*Home*/
-  .name {
-    padding: 0;
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 600ms, transform 300ms;
+  transition-delay: 200ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 600ms, transform 300ms;
+  transition-delay: 200ms;
+}
+/*end transition styles*/
+
+/*reusable styles*/
+.card {
+  padding: 20px;
+  margin-left: 10%;
+  width: 70%;
+  height: 70%;
+  border-radius: 16px;
+  box-shadow: -1.5rem 0 3rem #000;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.unclickableCard:hover {
+  transform: scale(1);
+  border: 1px solid lightskyblue;
+}
+
+/*card takes whole screen for small screens*/
+@media only screen and (max-width: 600px) {
+  .card {
     margin: 0;
-    font-size: 5rem;
-    font-family: Brush Script MT;
-    width: 25rem;
-    border-right: 0.1em solid lightskyblue;
+    width: 90%;
   }
 
+  .card:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+
+  .unclickableCard:hover {
+    transform: scale(1);
+    border: 1px solid lightskyblue;
+    cursor: default;
+  }
+}
+
+.left {
+  margin-left: 10%;
+}
+
+/*the slider buttons*/
+.button1 {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+.button1:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.selectedButton {
+  background-color: lightSkyBlue;
+  color: black;
+  font-weight: bold;
+}
+/*end resusable styles*/
+
+/*Home/Contact page*/
+.title {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
+
+.contactLink {
+  margin: 10px;
+  font-size: 7vh;
+  color: white;
+}
+.contactLink:hover {
+  color: lightskyblue;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+}
+.name {
+  padding: 0;
+  margin-left: 10%;
+  font-size: 4rem;
+  font-family: Brush Script MT;
+  width: 20rem;
+  border-right: 0.1em solid lightskyblue;
+}
+
+/*large screens*/
+/*typing animation on large screens*/
+@media only screen and (min-width: 800px) {
   @keyframes typing {
     from {
       width: 0;
@@ -231,29 +307,29 @@ main {
       width: 30%;
     }
   }
-}
-
-/*Home page typing animation*/
-.animated-home .name {
-  overflow: hidden;
-  border-right: 0.1em solid lightskyblue;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.9s step-end 6;
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: lightskyblue;
+    }
   }
-  50% {
-    border-color: lightskyblue;
+
+  .animated-home .name {
+    overflow: hidden;
+    border-right: 0.1em solid lightskyblue;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 2s steps(40, end), blink-caret 0.9s step-end 6;
   }
 }
 
-/*skills pages animation*/
+/*end homepage*/
 
+/*skills page*/
+/*skills animation */
 .skillsRow {
   display: block;
   animation-name: animateIn;
@@ -276,87 +352,6 @@ main {
 
   100% {
     opacity: 1;
-    width: 100%;
-  }
-}
-
-.skillsCard {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 5%;
-  padding-top: 1%;
-
-  border-radius: 16px;
-  box-shadow: -1rem 0 3rem #000;
-}
-
-.skillsAdditionalInfo {
-  border-radius: 16px;
-  padding: 2%;
-  width: 100%;
-  font-size: large;
-}
-
-.skillsLayout {
-  margin-bottom: 5.5rem;
-}
-
-@media only screen and (min-width: 900px) {
-  .skillsLayout {
-    display: grid;
-    grid-template-columns: 43% 43%;
-    gap: 5%;
-  }
-}
-
-/*Work page*/
-.workMain {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-}
-.workCard {
-  width: 80%;
-  padding: 2rem;
-  margin-left: 1rem;
-  border-radius: 16px;
-  background: var(--bg-primary);
-  box-shadow: -1rem 0 3rem #000;
-  transition: 100ms;
-}
-
-.entrance {
-  animation-name: fadeIn;
-  animation-duration: 500ms;
-  animation-delay: calc(var(--animation-order) * 100ms);
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
-.workCard:hover {
-  transform: scale(1.1);
-}
-.entrance:hover ~ .entrance {
-  transform: translateY(3rem);
-}
-.entrance:not(:first-child) {
-  margin-top: -3rem;
-}
-@keyframes fadeIn {
-  0% {
-    transform: scale(1.4) translateY(-10rem);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 800px) {
-  .workMain {
-    width: 70%;
-  }
-  .workCard {
     width: 100%;
   }
 }
