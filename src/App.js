@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import WorkExperience from "./pages/WorkExperience";
+import WorkExperience from "./pages/Work";
 import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import NavBar from "./components/NavBar";

@@ -1,15 +1,21 @@
 import React from "react";
 
+/*
+    high          style={{ background: "#03DAC6", width: "80%", height: "1em" }}
+    medium        style={{ background: "#BB86FC", width: "60%", height: "1em" }}
+    introductory  style={{ background: "#3700B3", width: "40%", height: "1em" }}
+*/
+
 function High() {
-  return <div style={{ background: "#03DAC6", width: "80%", height: "1em" }} />;
+  return <div className="high" />;
 }
 
 function Medium() {
-  return <div style={{ background: "#BB86FC", width: "60%", height: "1em" }} />;
+  return <div className="medium" />;
 }
 
 function Introductory() {
-  return <div style={{ background: "#3700B3", width: "40%", height: "1em" }} />;
+  return <div className="introductory" />;
 }
 
 function Row(props) {
@@ -33,7 +39,9 @@ function Row(props) {
 function Languages() {
   return (
     <div className="card unclickableCard">
-      <h1>Languages</h1>
+      <h1>
+        <em>Languages</em>
+      </h1>
       <div>
         <Row text="JavaScript" order={1} level="High" />
         <Row text="Python" order={2} level="High" />
@@ -48,7 +56,9 @@ function Languages() {
 function WebDevelopment() {
   return (
     <div className="card unclickableCard">
-      <h1>Web Development</h1>
+      <h1>
+        <em>Web Development</em>
+      </h1>
       <div>
         <Row text="React" order={1} level="High" />
         <Row text="MERN" order={2} level="High" />
@@ -65,7 +75,9 @@ function WebDevelopment() {
 function MachineLearning() {
   return (
     <div className="card unclickableCard">
-      <h1>Data Analysis and Machine Learning</h1>
+      <h1>
+        <em>Data Science</em>
+      </h1>
       <div>
         <Row text="Numpy" order={1} level="High" />
         <Row text="Scipy" order={1} level="High" />
@@ -81,7 +93,9 @@ function MachineLearning() {
 function OtherSkills() {
   return (
     <div className="card unclickableCard">
-      <h1>Other Strong Skills</h1>
+      <h1>
+        <em>Other Strong Skills</em>
+      </h1>
       <div>
         <Row text="Github" order={1} level="High" />
         <Row text="Linux" order={1} level="High" />
@@ -96,7 +110,9 @@ function OtherSkills() {
 function Intro() {
   return (
     <div className="left">
-      <h1>Skills</h1>
+      <h1>
+        <em>Skills</em>
+      </h1>
       <p>
         Strong <em>problem solving skills</em> being a Maths major and doing
         research.

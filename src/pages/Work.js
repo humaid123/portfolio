@@ -4,7 +4,7 @@ import { FaChevronCircleRight } from "react-icons/fa";
 
 function WorkCard({ title, where, bullets }) {
   return (
-    <div className="card unclickableCard">
+    <div className="card">
       <h1>
         <em>{title}</em>
       </h1>
@@ -14,7 +14,7 @@ function WorkCard({ title, where, bullets }) {
           <FaChevronCircleRight
             style={{
               fontSize: "0.8rem",
-              color: "lightskyblue",
+              color: "var(--highlight)",
               marginRight: "0.5rem",
             }}
           />
@@ -79,7 +79,7 @@ function SoftwareDevelopment() {
   );
 }
 
-export default function WorkExperience() {
+export default function Work() {
   const [showResearch, setShowResearch] = useState(false);
   return (
     <>

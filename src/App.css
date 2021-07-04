@@ -7,6 +7,11 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --highlight: lightskyblue;
+  --shadow: black;
+  --high: #03dac6; /* #4caf50 */
+  --medium: #bb86fc; /* #ff9800 */
+  --introductory: #3700b3; /*#1976d2*/
 }
 
 body {
@@ -14,11 +19,12 @@ body {
   background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
+  transition: all 0.5s ease-in;
 }
 
 em {
   font-weight: bold;
-  color: lightskyblue;
+  color: var(--highlight);
 }
 
 /*styling the scrollbar*/
@@ -31,7 +37,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: lightskyblue;
+  background: var(--highlight);
 }
 /*end styling scrollbar*/
 
@@ -79,7 +85,7 @@ main {
 
 .icon {
   font-size: 2rem;
-  color: lightskyblue;
+  color: var(--highlight);
   transition: 300ms;
 }
 
@@ -99,7 +105,7 @@ main {
   margin: 0.5rem;
   margin-bottom: 1rem;
   text-align: center;
-  color: lightskyblue;
+  color: var(--highlight);
   background: var(--bg-secondary);
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
@@ -122,7 +128,7 @@ main {
     margin-left: 6rem;
   }
   .navbar {
-    border-right: 3px solid lightskyblue;
+    border-right: 3px solid var(--highlight);
     top: 0;
     width: 5rem;
     height: 100vh; /*vh is size of viewport/browser window*/
@@ -144,7 +150,7 @@ main {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    border-top: 3px solid lightskyblue;
+    border-top: 3px solid var(--highlight);
   }
 
   .logo {
@@ -204,7 +210,7 @@ main {
   width: 70%;
   height: 70%;
   border-radius: 16px;
-  box-shadow: -1.5rem 0 3rem #000;
+  box-shadow: -1.5rem 0 3rem var(--shadow);
   transition: all 0.5s ease-in-out;
 }
 
@@ -215,7 +221,6 @@ main {
 
 .unclickableCard:hover {
   transform: scale(1);
-  border: 1px solid lightskyblue;
   cursor: default;
 }
 
@@ -236,6 +241,11 @@ main {
 .left {
   margin-left: 10%;
 }
+@media only screen and (max-width: 600px) {
+  .left {
+    margin-left: 0;
+  }
+}
 
 /*the slider buttons*/
 .button1 {
@@ -248,18 +258,18 @@ main {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #ffffff;
+  color: var(--text-primary);
   text-align: center;
   transition: all 0.2s;
 }
 .button1:hover {
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--bg-primary);
+  background-color: var(--text-primary);
   cursor: pointer;
 }
 .selectedButton {
-  background-color: lightSkyBlue;
-  color: black;
+  background-color: var(--highlight);
+  color: var(--bg-primary);
   font-weight: bold;
 }
 /*end resusable styles*/
@@ -273,10 +283,10 @@ main {
 .contactLink {
   margin: 10px;
   font-size: 7vh;
-  color: white;
+  color: var(--text-primary);
 }
 .contactLink:hover {
-  color: lightskyblue;
+  color: var(--highlight);
 }
 
 .contacts {
@@ -289,7 +299,7 @@ main {
   font-size: 4rem;
   font-family: Brush Script MT;
   width: 20rem;
-  border-right: 0.1em solid lightskyblue;
+  border-right: 0.1em solid var(--highlight);
 }
 
 /*large screens*/
@@ -309,13 +319,13 @@ main {
       border-color: transparent;
     }
     50% {
-      border-color: lightskyblue;
+      border-color: var(--highlight);
     }
   }
 
   .animated-home .name {
     overflow: hidden;
-    border-right: 0.1em solid lightskyblue;
+    border-right: 0.1em solid var(--highlight);
     white-space: nowrap;
     margin: 0 auto;
     animation: typing 2s steps(40, end), blink-caret 0.9s step-end 6;
@@ -350,4 +360,22 @@ main {
     opacity: 1;
     width: 100%;
   }
+}
+
+.high {
+  background: var(--high);
+  width: 90%;
+  height: 1em;
+}
+
+.medium {
+  background: var(--medium);
+  width: 70%;
+  height: 1em;
+}
+
+.introductory {
+  background: var(--introductory);
+  width: 50%;
+  height: 1em;
 }
