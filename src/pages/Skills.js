@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Lottie from "lottie-web";
+import animation from "../animations/new-education2.json";
 
 /*
     high          style={{ background: "#03DAC6", width: "80%", height: "1em" }}
@@ -108,23 +110,49 @@ function OtherSkills() {
 }
 
 function Intro() {
+  const animationRef = useRef();
+  useEffect(() => {
+    const anim = Lottie.loadAnimation({
+      container: animationRef.current,
+      animationData: animation,
+      autoplay: false,
+      renderer: "svg",
+      loop: true,
+      rendererSettings: {
+        progressiveLoad: true,
+      },
+    });
+    setTimeout(() => {
+      anim.play();
+    }, 100);
+    return () => {
+      Lottie.destroy();
+    };
+  }, []);
+
   return (
     <div className="left">
-      <h1>
-        <em>Skills</em>
-      </h1>
-      <p>
-        Strong <em>problem solving skills</em> being a Maths major and doing
-        research.
-      </p>
-      <p>
-        Strong <em>Active learning skills</em> by constantly learning new
-        technologies, software development, algorithms and so on.
-      </p>
-      <p>
-        Strong <em>Time management skills</em> by keeping up high academic
-        performance while working, coding personal projects and doing research.
-      </p>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{ width: "fit-content", height: "10rem" }}
+          ref={animationRef}
+        />
+        <div>
+          <p>
+            Strong <em>problem solving skills</em> being a Maths major and doing
+            research.
+          </p>
+          <p>
+            Strong <em>Active learning skills</em> by constantly learning new
+            technologies, software development, algorithms and so on.
+          </p>
+          <p>
+            Strong <em>Time management skills</em> by keeping up high academic
+            performance while working, coding personal projects and doing
+            research.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Lottie from "lottie-web";
+import animation from "../animations/new-home3.json";
 
 const home_style = {
   display: "flex",
@@ -44,6 +46,7 @@ function Contact() {
 
 export default function Home() {
   const [animate, setAnimate] = useState(true);
+  const animationRef = useRef();
 
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
@@ -54,10 +57,28 @@ export default function Home() {
     }
   }, [animate]);
 
+  useEffect(() => {
+    Lottie.loadAnimation({
+      container: animationRef.current,
+      animationData: animation,
+      loop: true,
+      renderer: "svg",
+      rendererSettings: {
+        progressiveLoad: true,
+      },
+    });
+    return () => {
+      Lottie.destroy();
+    };
+  }, []);
+
   return (
     <div className={animate ? "animated-home" : "home"} style={home_style}>
-      <span className="name">Humaid M.</span>
-      <span className="name">Agowun</span>
+      <div
+        style={{ width: "25em", height: "15em", marginLeft: "5em" }}
+        ref={animationRef}
+      />
+      <p className="home-name">Humaid M. Agowun</p>
       <p className="title">Developer, Student, Researcher</p>
       <Contact />
     </div>

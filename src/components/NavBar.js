@@ -79,7 +79,12 @@ export default function NavBar() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" onClick={changeTheme} to="#">
+          <Link
+            className="nav-link"
+            id="theme-nav-link"
+            onClick={changeTheme}
+            to="#"
+          >
             <FaStar className="icon" />
             <span className="link-text">Theme</span>
           </Link>

@@ -6,7 +6,8 @@ import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
+// NOT SURE IF I NEED TO LOAD
+//import Loading from "./components/Loading";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
@@ -19,27 +20,16 @@ const routes = [
 function App() {
   return (
     <Router>
-      <>
-        <NavBar />
-        <div className="container">
-          {routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={300}
-                  classNames="page"
-                  unmountOnExit
-                >
-                  <div className="page">
-                    <Component />
-                  </div>
-                </CSSTransition>
-              )}
-            </Route>
-          ))}
-        </div>
-      </>
+      <NavBar />
+      <div className="container">
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            <div className="page">
+              <Component />
+            </div>
+          </Route>
+        ))}
+      </div>
     </Router>
   );
 }

@@ -1,33 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Card from "../components/Card";
+import Lottie from "lottie-web";
+import animation from "../animations/work.json";
 
-import { FaChevronCircleRight } from "react-icons/fa";
-
-function WorkCard({ title, where, bullets }) {
-  return (
-    <div className="card">
-      <h1>
-        <em>{title}</em>
-      </h1>
-      <h3>{where}</h3>
-      {bullets.map((bullet, index) => (
-        <p key={index}>
-          <FaChevronCircleRight
-            style={{
-              fontSize: "0.8rem",
-              color: "var(--highlight)",
-              marginRight: "0.5rem",
-            }}
-          />
-          {bullet}
-        </p>
-      ))}
-    </div>
-  );
-}
 function Research() {
   return (
     <div>
-      <WorkCard
+      <Card
         title={"Research Assitant - Numerical Analysis"}
         where={"Saint Mary's University, Halifax, NS"}
         bullets={[
@@ -37,7 +16,7 @@ function Research() {
           "Supervised by Dr. Paul Muir",
         ]}
       />
-      <WorkCard
+      <Card
         title={"Research Assitant - Business Intelligence"}
         where={"Saint Mary's University, Halifax NS"}
         bullets={[
@@ -53,7 +32,7 @@ function Research() {
 function SoftwareDevelopment() {
   return (
     <div>
-      <WorkCard
+      <Card
         title={"Coop Software Developer"}
         where={"The Discovery Centre, Halifax, NS"}
         bullets={[
@@ -67,7 +46,7 @@ function SoftwareDevelopment() {
           "Built micro-controller game where users match wires where correct matches makes a model airplane move. (C teensy libraries)",
         ]}
       />
-      <WorkCard
+      <Card
         title={"IT Security intern"}
         where={"Bank One, Port Louis, Mauritius"}
         bullets={[
@@ -81,20 +60,44 @@ function SoftwareDevelopment() {
 
 export default function Work() {
   const [showResearch, setShowResearch] = useState(false);
+  const animationRef = useRef();
+  useEffect(() => {
+    Lottie.loadAnimation({
+      container: animationRef.current,
+      animationData: animation,
+      autoplay: true,
+      renderer: "svg",
+      loop: true,
+      rendererSettings: {
+        progressiveLoad: true,
+      },
+    });
+    return () => {
+      Lottie.destroy();
+    };
+  }, []);
+
   return (
     <>
-      <div className="left">
+      <div className="left slider-nav">
+        <div style={{ display: "flex" }}>
+          <div style={{ width: "15rem", height: "10rem" }} ref={animationRef} />
+        </div>
         <div
           onClick={() => setShowResearch(false)}
-          className={showResearch ? "button1" : "button1 selectedButton"}
+          className="button1-container"
         >
-          Software Development
+          <div className={showResearch ? "button1" : "button1 selectedButton"}>
+            Software Development
+          </div>
         </div>
         <div
           onClick={() => setShowResearch(true)}
-          className={showResearch ? "button1 selectedButton" : "button1"}
+          className="button1-container"
         >
-          Research
+          <div className={showResearch ? "button1 selectedButton" : "button1"}>
+            Research
+          </div>
         </div>
       </div>
       <div style={{ paddingTop: "5vh" }}>
