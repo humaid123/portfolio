@@ -49,31 +49,31 @@ export default function NavBar() {
           <FaGreaterThan />
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/portfolio">
             <FaHome className="icon" />
             <span className="link-text">Contact</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/skills">
+          <Link className="nav-link" to="/portfolio/skills">
             <FaCode className="icon" />
             <span className="link-text">Skills</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/work">
+          <Link className="nav-link" to="/portfolio/work">
             <FaBriefcase className="icon" />
             <span className="link-text">Work</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/projects">
+          <Link className="nav-link" to="/portfolio/projects">
             <FaLightbulb className="icon" />
             <span className="link-text">Projects</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/education">
+          <Link className="nav-link" to="/portfolio/education">
             <FaFeatherAlt className="icon" />
             <span className="link-text">Education</span>
           </Link>

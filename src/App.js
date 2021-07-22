@@ -10,11 +10,15 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 //import Loading from "./components/Loading";
 
 const routes = [
-  { path: "/", name: "Home", Component: Home },
-  { path: "/skills", name: "Skills", Component: Skills },
-  { path: "/work", name: "Work Experience", Component: WorkExperience },
-  { path: "/projects", name: "Projects", Component: Projects },
-  { path: "/education", name: "Education", Component: Education },
+  { path: "/portfolio", name: "Home", Component: Home },
+  { path: "/portfolio/skills", name: "Skills", Component: Skills },
+  {
+    path: "/portfolio/work",
+    name: "Work Experience",
+    Component: WorkExperience,
+  },
+  { path: "/portfolio/projects", name: "Projects", Component: Projects },
+  { path: "/portfolio/education", name: "Education", Component: Education },
 ];
 
 function App() {
