@@ -33,7 +33,7 @@ function Education() {
   );
 }
 
-function Publications() {
+function Research() {
   return (
     <div>
       <Card
@@ -68,7 +68,7 @@ function Publications() {
 }
 
 export default function MoreAboutMe() {
-  const [showPublications, setShowPublications] = useState(false);
+  const [showResearch, setShowResearch] = useState(false);
   const animationRef = useRef();
   useEffect(() => {
     const anim = Lottie.loadAnimation({
@@ -98,27 +98,23 @@ export default function MoreAboutMe() {
           />
         </div>
         <div
-          onClick={() => setShowPublications(false)}
+          onClick={() => setShowResearch(false)}
           className="button1-container"
         >
-          <div
-            className={showPublications ? "button1" : "button1 selectedButton"}
-          >
+          <div className={showResearch ? "button1" : "button1 selectedButton"}>
             Education
           </div>
         </div>
         <div
-          onClick={() => setShowPublications(true)}
+          onClick={() => setShowResearch(true)}
           className="button1-container"
         >
-          <div
-            className={showPublications ? "button1 selectedButton" : "button1"}
-          >
-            Publications
+          <div className={showResearch ? "button1 selectedButton" : "button1"}>
+            Research
           </div>
         </div>
       </div>
-      <div>{showPublications ? <Publications /> : <Education />}</div>
+      <div>{showResearch ? <Research /> : <Education />}</div>
     </>
   );
 }
