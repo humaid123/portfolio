@@ -10,7 +10,7 @@ function MachineLearning() {
         title={"Book Recommendation Engine using KNN"}
         where={"Personal"}
         bullets={[
-          "Using the Book-Crossings dataset, we use a KNN to group related books together " +
+          "Using the Book-Crossings dataset, we apply a k-Nearest Neighbours algorithm to group related books together " +
             "and provide recommendations to a user based on the user's viewed/read book.",
         ]}
       />
@@ -20,15 +20,14 @@ function MachineLearning() {
         bullets={[
           "Given a dataset that contains information about different people including their BMI " +
             "and other health related factors as well as their healthcare costs, we train a model " +
-            "which given a new person's health information will give us an estimated of their healthcare cost.",
+            "which, given a new person's health information will give us an estimate of their healthcare cost.",
         ]}
       />
       <Card
         title={"Spam Detector"}
         where={"Personal"}
         bullets={[
-          "Neural network classifier project that is trained on a set of messages and whether each message " +
-            "is a spam or not will predict if an incoming message is a spam.",
+          "Neural network classifier project that is trained to detect if an incoming message is a spam.",
         ]}
       />
     </div>
@@ -43,8 +42,7 @@ function SoftwareDevelopment() {
         where={"Personal"}
         bullets={[
           "Building an MS teams clone that allows instant messaging with socket.io, video chatting with webRTC, " +
-            "sharing documents with Multer and google docs like feature for multiple people to edit a file at the same time. " +
-            "It showcases almost all modern web technologies short of PWAs and web assembly.",
+            "sharing documents with Multer and google docs like feature for multiple people to edit a file at the same time.",
         ]}
       />
       <Card
@@ -66,8 +64,8 @@ function SoftwareDevelopment() {
         title={"Other Projects"}
         where={"School and Personal"}
         bullets={[
-          "Within the last few years, I have built an array of projects for school work and for personal use.",
-          "Examples include: a LAMP car dealership landing page, a C# pong game, a Java Console Chess game, " +
+          "Within the last few years, I have built an array of projects for school and for personal use.",
+          "Examples include: a LAMP car dealership landing page, a C# pong game, a Java console Chess game, " +
             "a python Password cracker using multiple attack approaches and so on...",
         ]}
       />

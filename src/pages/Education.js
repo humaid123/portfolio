@@ -22,11 +22,11 @@ function Education() {
         title={"JavaScript and Python Certificates"}
         where={"FreeCodeCamp"}
         description={
-          "I participated in an online bootcamp during the pandemic with the goal of improving on all my JavaScript, Python and related libraries and framework skills."
+          "I participated in an online bootcamp during the pandemic with the goal of improving on all my JavaScript and Python skills (with the related libraries)."
         }
         bullets={[
           "Learnt more about MERN, Sass, socket.io, web security, responsive design and data visualisation (D3.js) through projects.",
-          "Learnt more about the Python's data analysis and machine learning ecosystem (Pandas, Matplotlib, SKLearn, Tensorflow) through projects.",
+          "Learnt more about the data analysis and machine learning (Pandas, Matplotlib, SKLearn, Tensorflow) through projects.",
         ]}
       />
     </div>
@@ -41,21 +41,21 @@ function Publications() {
         where={" Saint Mary's University"}
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
-          "Addded Parallelisation to the famous BVODE solver, used in scipy.integrate.solve_bvp, by using Fortran OMP and parallel sparse matrix LU factorisations packages.",
+          "Addded Parallelisation to the famous BVODE solver, used in scipy.integrate.solve_bvp, by using Fortran with OpenMP and parallel BABD solver, RSCALE.",
         ]}
       />
       <Card
-        topic={"Covid-19 modelling with ODEs and PDEs"}
+        title={"Covid-19 modelling with ODEs"}
         where={"Saint Mary's University"}
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
-          "Looked into discontinuity problems in ODES and PDEs and how they affect Covid-19  models.",
+          "Looked into discontinuity problems in ODES and how they affect Covid-19  models.",
           "Did a survey of popular ODE solvers in Python, R, Scilab and Matlab on how they react to discontinuities.",
           "Discussed methods to improve the accuracy and performance of these popular ODE solvers with event detection.",
         ]}
       />
       <Card
-        topic={"Business Intelligence"}
+        title={"Business Intelligence Reports"}
         where={"Saint Mary's University"}
         description={"Supervised by Dr. Hai Wang"}
         bullets={[

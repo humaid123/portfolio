@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-web";
-import animation from "../animations/new-education2.json";
+import animation from "../animations/theme.json";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 /*
     high          style={{ background: "#03DAC6", width: "80%", height: "1em" }}
@@ -49,7 +50,7 @@ function Languages() {
         <Row text="Python" order={2} level="High" />
         <Row text="C/C++" order={3} level="Medium" />
         <Row text="Java" order={4} level="Introductory" />
-        <Row text="Fortran" order={2} level="High" />
+        <Row text="Fortran" order={5} level="High" />
       </div>
     </div>
   );
@@ -64,11 +65,10 @@ function WebDevelopment() {
       <div>
         <Row text="React" order={1} level="High" />
         <Row text="MERN" order={2} level="High" />
-        <Row text="TypeScript" order={4} level="Medium" />
-        <Row text="Sass" order={5} level="Medium" />
-        <Row text="webRTC" order={6} level="Introductory" />
-        <Row text="Socket.io" order={6} level="High" />
-        <Row text="Three.js" order={5} level="Introductory" />
+        <Row text="TypeScript" order={3} level="Medium" />
+        <Row text="Sass" order={4} level="Medium" />
+        <Row text="Socket.io" order={5} level="High" />
+        <Row text="Three.js" order={6} level="Introductory" />
       </div>
     </div>
   );
@@ -82,11 +82,11 @@ function MachineLearning() {
       </h1>
       <div>
         <Row text="Numpy" order={1} level="High" />
-        <Row text="Scipy" order={1} level="High" />
-        <Row text="Pandas" order={2} level="High" />
-        <Row text="Matplotlib" order={3} level="High" />
-        <Row text="Scikit Learn" order={4} level="Medium" />
-        <Row text="TensorFlow" order={5} level="Introductory" />
+        <Row text="Scipy" order={2} level="High" />
+        <Row text="Pandas" order={3} level="High" />
+        <Row text="Matplotlib" order={4} level="High" />
+        <Row text="Scikit Learn" order={5} level="Medium" />
+        <Row text="TensorFlow" order={6} level="Introductory" />
       </div>
     </div>
   );
@@ -100,10 +100,11 @@ function OtherSkills() {
       </h1>
       <div>
         <Row text="Github" order={1} level="High" />
-        <Row text="Linux" order={1} level="High" />
-        <Row text="OOP" order={1} level="High" />
-        <Row text="SQL" order={2} level="High" />
-        <Row text="Matlab/Scilab" order={3} level="Medium" />
+        <Row text="Linux" order={2} level="High" />
+        <Row text="OOP" order={3} level="High" />
+        <Row text="SQL" order={4} level="High" />
+        <Row text="Matlab/Scilab" order={5} level="Medium" />
+        <Row text="HPC" order={6} level="Medium" />
       </div>
     </div>
   );
@@ -133,23 +134,43 @@ function Intro() {
   return (
     <div className="left">
       <div style={{ display: "flex" }}>
-        <div
-          style={{ width: "fit-content", height: "10rem" }}
-          ref={animationRef}
-        />
+        <div style={{ width: "10em", height: "10rem" }} ref={animationRef} />
         <div>
+          <h2>
+            <em>Demonstrated aptitude for:</em>
+          </h2>
           <p>
-            Strong <em>problem solving skills</em> being a Maths major and doing
-            research.
+            <FaChevronCircleRight
+              style={{
+                fontSize: "0.8rem",
+                color: "var(--highlight)",
+                marginRight: "0.5rem",
+              }}
+            />
+            <em>Problem solving</em> through participation in Computer Science
+            and Mathematics research and independent projects.
           </p>
           <p>
-            Strong <em>Active learning skills</em> by constantly learning new
-            technologies, software development, algorithms and so on.
+            <FaChevronCircleRight
+              style={{
+                fontSize: "0.8rem",
+                color: "var(--highlight)",
+                marginRight: "0.5rem",
+              }}
+            />
+            <em>Active Learning</em> though extensive self-learning via online
+            bootcamp, research papers and tech tutorials.
           </p>
           <p>
-            Strong <em>Time management skills</em> by keeping up high academic
-            performance while working, coding personal projects and doing
-            research.
+            <FaChevronCircleRight
+              style={{
+                fontSize: "0.8rem",
+                color: "var(--highlight)",
+                marginRight: "0.5rem",
+              }}
+            />
+            <em>Team working</em> by collaborating with the Bank One, Discovery
+            Center, research and student project teams.
           </p>
         </div>
       </div>
