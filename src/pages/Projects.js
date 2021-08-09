@@ -38,11 +38,11 @@ function SoftwareDevelopment() {
   return (
     <>
       <Card
-        title={"MS Teams Clone - Work in Progress"}
+        title={"Social Media/Chat App - Work in Progress"}
         where={"Personal"}
         bullets={[
-          "Building an MS teams clone that allows instant messaging with socket.io, video chatting with webRTC, " +
-            "sharing documents with Multer and google docs like feature for multiple people to edit a file at the same time.",
+          "Building a Social Media App for Friends that allows sharing posts, following people and message chats.",
+          "Main goal was to explore GraphQL. Uses: React, TypeScript, GraphQL, PostgreSQL and Prisma",
         ]}
       />
       <Card
