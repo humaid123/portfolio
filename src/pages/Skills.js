@@ -48,8 +48,8 @@ function Languages() {
       <div>
         <Row text="JavaScript" order={1} level="High" />
         <Row text="Python" order={2} level="High" />
-        <Row text="C/C++" order={3} level="Medium" />
         <Row text="Java" order={4} level="Introductory" />
+        <Row text="C/C++" order={3} level="Introductory" />
         <Row text="Fortran" order={5} level="High" />
       </div>
     </div>
@@ -67,6 +67,7 @@ function WebDevelopment() {
         <Row text="MERN" order={2} level="High" />
         <Row text="TypeScript" order={3} level="Medium" />
         <Row text="Sass" order={4} level="Medium" />
+        <Row text="GraphQL" order={4} level="Medium" />
         <Row text="Socket.io" order={5} level="High" />
         <Row text="Three.js" order={6} level="Introductory" />
       </div>
@@ -82,10 +83,9 @@ function MachineLearning() {
       </h1>
       <div>
         <Row text="Numpy" order={1} level="High" />
-        <Row text="Scipy" order={2} level="High" />
         <Row text="Pandas" order={3} level="High" />
         <Row text="Matplotlib" order={4} level="High" />
-        <Row text="Scikit Learn" order={5} level="Medium" />
+        <Row text="Scikit Learn" order={5} level="Introductory" />
         <Row text="TensorFlow" order={6} level="Introductory" />
       </div>
     </div>
@@ -103,8 +103,23 @@ function OtherSkills() {
         <Row text="Linux" order={2} level="High" />
         <Row text="OOP" order={3} level="High" />
         <Row text="SQL" order={4} level="High" />
-        <Row text="Matlab/Scilab" order={5} level="Medium" />
-        <Row text="HPC" order={6} level="Medium" />
+        <Row text="Matlab/Scilab" order={5} level="Introductory" />
+        <Row text="HPC" order={6} level="Introductory" />
+      </div>
+    </div>
+  );
+}
+
+function Interpretation() {
+  return (
+    <div className="card unclickableCard">
+      <h1>
+        <em>Barchart Interpretation</em>
+      </h1>
+      <div>
+        <Row text="Proficient" order={1} level="High" />
+        <Row text="Skilled" order={2} level="Medium" />
+        <Row text="Introductory" order={3} level="Introductory" />
       </div>
     </div>
   );
@@ -183,6 +198,7 @@ export default function Skills() {
     <>
       <Intro />
       <div>
+        <Interpretation />
         <Languages />
         <WebDevelopment />
         <MachineLearning />

@@ -38,14 +38,6 @@ function SoftwareDevelopment() {
   return (
     <>
       <Card
-        title={"Social Media/Chat App - Work in Progress"}
-        where={"Personal"}
-        bullets={[
-          "Building a Social Media App for Friends that allows sharing posts, following people and message chats.",
-          "Main goal was to explore GraphQL. Uses: React, TypeScript, GraphQL, PostgreSQL and Prisma",
-        ]}
-      />
-      <Card
         title={"MS Outlook Clone"}
         where={"For Autism Nova Scotia - ANS"}
         bullets={[
@@ -66,7 +58,8 @@ function SoftwareDevelopment() {
         bullets={[
           "Within the last few years, I have built an array of projects for school and for personal use.",
           "Examples include: a LAMP car dealership landing page, a C# pong game, a Java console Chess game, " +
-            "a python Password cracker using multiple attack approaches and so on...",
+            "a python Password cracker using multiple attack approaches and a Social Media Project using CRUD " +
+            "with GraphQL, mikroORM, Apollo.",
         ]}
       />
     </>
