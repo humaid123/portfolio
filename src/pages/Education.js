@@ -45,11 +45,30 @@ function Research() {
         ]}
       />
       <Card
+        title={"IVODE solver with defect control"}
+        where={"Saint Mary's University"}
+        description={"Supervised by Dr. Paul Muir"}
+        bullets={[
+          "Looked into optimizing defect control solvers using Hermite-Birkhoff interpolants instead of tradition CRK formulae.",
+          "Coded a 6th order Runge-Kutta solver with defect control capabilities as a proof of concept."
+        ]}
+      />
+      <Card
+        title={"Covid-19 modelling with PDEs"}
+        where={"Saint Mary's University"}
+        description={"Supervised by Dr. Paul Muir"}
+        bullets={[
+          "Looked into discontinuity problems in PDES and how they affect Covid-19 PDE models.",
+          "Used BACOLIKR, a PDE solver based on B-spline collocation with event detection capabilities, " 
+          + "to discuss methods to improve the accuracy and performance of solving discontinuous PDEs.",
+        ]}
+      />
+      <Card
         title={"Covid-19 modelling with ODEs"}
         where={"Saint Mary's University"}
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
-          "Looked into discontinuity problems in ODES and how they affect Covid-19  models.",
+          "Looked into discontinuity problems in ODES and how they affect Covid-19 models.",
           "Did a survey of popular ODE solvers in Python, R, Scilab and Matlab on how they react to discontinuities.",
           "Discussed methods to improve the accuracy and performance of these popular ODE solvers with event detection.",
         ]}
