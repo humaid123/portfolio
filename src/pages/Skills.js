@@ -48,9 +48,9 @@ function Languages() {
       <div>
         <Row text="JavaScript" order={1} level="High" />
         <Row text="Python" order={2} level="High" />
-        <Row text="Java" order={4} level="Introductory" />
-        <Row text="C/C++" order={3} level="Introductory" />
-        <Row text="Fortran" order={5} level="High" />
+        <Row text="C/C++" order={3} level="Medium" />
+        <Row text="Fortran" order={4} level="Medium" />
+        <Row text="Java" order={5} level="Introductory" />
       </div>
     </div>
   );
@@ -65,10 +65,9 @@ function WebDevelopment() {
       <div>
         <Row text="React" order={1} level="High" />
         <Row text="MERN" order={2} level="High" />
-        <Row text="TypeScript" order={3} level="Medium" />
-        <Row text="Sass" order={4} level="Medium" />
-        <Row text="GraphQL" order={4} level="Medium" />
-        <Row text="Socket.io" order={5} level="High" />
+        <Row text="Socket.io" order={3} level="High" />
+        <Row text="TypeScript" order={4} level="Medium" />
+        <Row text="GraphQL" order={5} level="Medium" />
         <Row text="Three.js" order={6} level="Introductory" />
       </div>
     </div>
@@ -83,10 +82,10 @@ function MachineLearning() {
       </h1>
       <div>
         <Row text="Numpy" order={1} level="High" />
-        <Row text="Pandas" order={3} level="High" />
-        <Row text="Matplotlib" order={4} level="High" />
-        <Row text="Scikit Learn" order={5} level="Introductory" />
-        <Row text="TensorFlow" order={6} level="Introductory" />
+        <Row text="Pandas" order={2} level="High" />
+        <Row text="Matplotlib" order={3} level="High" />
+        <Row text="Scikit-Learn" order={4} level="Introductory" />
+        <Row text="TensorFlow" order={5} level="Introductory" />
       </div>
     </div>
   );
@@ -101,10 +100,9 @@ function OtherSkills() {
       <div>
         <Row text="Github" order={1} level="High" />
         <Row text="Linux" order={2} level="High" />
-        <Row text="OOP" order={3} level="High" />
-        <Row text="SQL" order={4} level="High" />
+        <Row text="OOP" order={3} level="Medium" />
+        <Row text="SQL" order={4} level="Medium" />
         <Row text="Matlab/Scilab" order={5} level="Introductory" />
-        <Row text="HPC" order={6} level="Introductory" />
       </div>
     </div>
   );

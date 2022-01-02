@@ -6,8 +6,6 @@ import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// NOT SURE IF I NEED TO LOAD
-//import Loading from "./components/Loading";
 
 const routes = [
   { path: "/portfolio", name: "Home", Component: Home },
