@@ -10,7 +10,7 @@ function MachineLearning() {
         title={"Book Recommendation Engine using KNN"}
         where={"Personal"}
         bullets={[
-          "Using the Book-Crossings dataset, we apply a k-Nearest Neighbours algorithm to group related books together " +
+          "Using the Book-Crossings dataset, I applied a k-Nearest Neighbours algorithm to group related books together " +
             "and provide recommendations to a user based on the user's viewed/read book.",
         ]}
       />
@@ -42,15 +42,15 @@ function SoftwareDevelopment() {
         where={"For Autism Nova Scotia - ANS"}
         bullets={[
           "Project written alongisde ANS to teach students on the spectrum to use emailing. " +
-            "Used Mongo(Mongoose), Express, JQuery, JWT and Css grid/flex to give an MS outlook-like experience.",
+            "Used Mongo(Mongoose), Express, JQuery, JWT and CSS grid/flex to give an MS outlook-like experience.",
         ]}
       />
       <Card
         title={"Graphics Projects"}
         where={"Academic/Research"}
         bullets={[
-          "Built a Ray-Tracer and added additional material from personal research as in acceleration data structures and so on.",
-          "Built a Procedural Terrain Generator and added additional research material as in Hybrid multifractal noise and so on.",
+          "Built a Ray-Tracer and added additional material from personal research as in acceleration data structures and others.",
+          "Built a Procedural Terrain Generator and added additional research material as in Hybrid multifractal noise and others.",
         ]}
       />
       <Card
@@ -66,7 +66,7 @@ function SoftwareDevelopment() {
         bullets={[
           "Within the last few years, I have built an array of projects for school and for personal use.",
           "Examples include: a LAMP car dealership landing page, a C# pong game, a Java console Chess game, " +
-            "a python Password cracker using multiple attack approaches and so on."
+            "a python Password cracker using multiple attack approaches and so on.",
         ]}
       />
     </>

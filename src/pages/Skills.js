@@ -3,12 +3,6 @@ import Lottie from "lottie-web";
 import animation from "../animations/theme.json";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-/*
-    high          style={{ background: "#03DAC6", width: "80%", height: "1em" }}
-    medium        style={{ background: "#BB86FC", width: "60%", height: "1em" }}
-    introductory  style={{ background: "#3700B3", width: "40%", height: "1em" }}
-*/
-
 function High() {
   return <div className="high" />;
 }

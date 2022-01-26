@@ -37,7 +37,7 @@ function Research() {
   return (
     <div>
       <Card
-        title={"Parallellisation of BVP_SOLVER"}
+        title={"Parallellisation of BVP_SOLVER - Ongoing"}
         where={" Saint Mary's University"}
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
@@ -49,8 +49,8 @@ function Research() {
         where={"Saint Mary's University"}
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
-          "Looked into optimizing defect control solvers using Hermite-Birkhoff interpolants instead of tradition CRK formulae.",
-          "Coded a 6th order Runge-Kutta solver with defect control capabilities as a proof of concept."
+          "Looked into optimizing defect control solvers using a new method using Hermite-Birkhoff interpolants instead of tradition CRK formulae.",
+          "Coded a 6th and 8th order Runge-Kutta solver with interpolants of 6th and 8th order to show defect control capabilities of this new method as a proof of concept.",
         ]}
       />
       <Card
@@ -59,8 +59,8 @@ function Research() {
         description={"Supervised by Dr. Paul Muir"}
         bullets={[
           "Looked into discontinuity problems in PDES and how they affect Covid-19 PDE models.",
-          "Used BACOLIKR, a PDE solver based on B-spline collocation with event detection capabilities, " 
-          + "to discuss methods to improve the accuracy and performance of solving discontinuous PDEs.",
+          "Used BACOLIKR, a PDE solver based on B-spline collocation with event detection capabilities, " +
+            "to discuss methods to improve the accuracy and performance of solving discontinuous PDE problems.",
         ]}
       />
       <Card
