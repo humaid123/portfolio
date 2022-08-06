@@ -9,9 +9,11 @@ function Research() {
       <Card
         title={"Research Assistant - Scientific Computing"}
         where={"Saint Mary's University, Halifax, NS"}
-        description={"May 2021 - Present"}
+        description={"May 2021 - July 2022"}
         bullets={[
+          "Explored using Hermite interpolants of 4th, 6th, 8th and 10th order to create continuous numerical differential equations solver.",
           "Researched how discontinuities affect IVODE solvers in R, Python, Matlab, Scilab and Fortran code.",
+          "Researched how discontinuities affect PDE solvers using BACOLIKR.",
           "Improved the performance of the popular BVODE solver, BVP_SOLVER2, used in scipy.integrate.solve_bvp, by using Parallel Computing (Fortran, OpenMP).",
           "Supervised by Dr. Paul Muir.",
         ]}
@@ -34,12 +36,18 @@ function SoftwareDevelopment() {
   return (
     <div>
       <Card
+        title={"Software Development Engineer"}
+        where={"Amazon, Vancouver, BC"}
+        description={"Aug 2022 - Present"}
+      />
+      <Card
         title={"Coop Software Developer"}
         where={"The Discovery Centre, Halifax, NS"}
-        description={"Jan 2022 - Present"}
+        description={"Jan 2022 - April 2022"}
         bullets={[
+          "Optimized exhibit monitoring for non-technical staff by creating an exhibit automation system (EMS) that enables remotely switching on/off the screens, lights, and projectors at centre. Coded a node daemon that runs on each exhibits that takes screenshots, monitors performance and runs remote commands. Coded a MERN app as the interface to all such daemons in the centre to calibrate their state and monitor their performance. Used socket.io for bidirectional communication, Chakra-UI for rapid styling and other libraries to perform system monitoring and run scripts.",
           "Improved MERN CMS built during previous internship by adding new graphical elements, doing bug fixes and adding new socket.io based live messaging feature to broadcast automatic messages to visitors based on a calendar.",
-          "(Ongoing) Automating monitoring, turning on and off exhibit at the centre with a MERN app.",
+          "Coded a Fish interactive app to be used during the Ocean exhibit that allows users to color fishes and submit them to the atrium screen. Used three.js, the canvas and SVG API and websockets.",
         ]}
       />
       <Card

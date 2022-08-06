@@ -41,10 +41,11 @@ function Languages() {
       </h1>
       <div>
         <Row text="JavaScript" order={1} level="High" />
-        <Row text="Python" order={2} level="High" />
-        <Row text="C/C++" order={3} level="Medium" />
-        <Row text="Fortran" order={4} level="Medium" />
-        <Row text="Java" order={5} level="Introductory" />
+        <Row text="TypeScript" order={2} level="High" />
+        <Row text="Python" order={3} level="Medium" />
+        <Row text="Java" order={4} level="Medium" />
+        <Row text="C/C++" order={5} level="Introductory" />
+        <Row text="Fortran" order={6} level="Introductory" />
       </div>
     </div>
   );
@@ -59,9 +60,7 @@ function WebDevelopment() {
       <div>
         <Row text="React" order={1} level="High" />
         <Row text="MERN" order={2} level="High" />
-        <Row text="Socket.io" order={3} level="High" />
-        <Row text="TypeScript" order={4} level="Medium" />
-        <Row text="GraphQL" order={5} level="Medium" />
+        <Row text="Websocket" order={4} level="Medium" />
         <Row text="Three.js" order={6} level="Introductory" />
       </div>
     </div>
@@ -75,11 +74,12 @@ function MachineLearning() {
         <em>Data Science</em>
       </h1>
       <div>
-        <Row text="Numpy" order={1} level="High" />
-        <Row text="Pandas" order={2} level="High" />
-        <Row text="Matplotlib" order={3} level="High" />
-        <Row text="Scikit-Learn" order={4} level="Introductory" />
-        <Row text="TensorFlow" order={5} level="Introductory" />
+        <Row text="NumPy" order={1} level="High" />
+        <Row text="SciPy" order={2} level="High" />
+        <Row text="Pandas" order={3} level="Medium" />
+        <Row text="Matplotlib" order={4} level="Medium" />
+        <Row text="Scikit-Learn" order={5} level="Introductory" />
+        <Row text="TensorFlow" order={6} level="Introductory" />
       </div>
     </div>
   );

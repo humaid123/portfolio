@@ -79,7 +79,7 @@ export default function Home() {
         ref={animationRef}
       />
       <p className="home-name">Humaid M. Agowun</p>
-      <p className="title">Developer, Student, Researcher</p>
+      <p className="title">Sofware Developer & CS Researcher</p>
       <Contact />
     </div>
   );
