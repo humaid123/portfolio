@@ -23,18 +23,19 @@ function Card({ title, where, description, bullets, importantNote }) {
         </p>
       )}
       {description && <p>{description}</p>}
-      {bullets.map((bullet, index) => (
-        <p key={`${title}_${index}`}>
-          <FaChevronCircleRight
-            style={{
-              fontSize: "0.8rem",
-              color: "var(--highlight)",
-              marginRight: "0.5rem",
-            }}
-          />
-          {bullet}
-        </p>
-      ))}
+      {bullets &&
+        bullets.map((bullet, index) => (
+          <p key={`${title}_${index}`}>
+            <FaChevronCircleRight
+              style={{
+                fontSize: "0.8rem",
+                color: "var(--highlight)",
+                marginRight: "0.5rem",
+              }}
+            />
+            {bullet}
+          </p>
+        ))}
     </div>
   );
 }
