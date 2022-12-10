@@ -40,12 +40,11 @@ function Languages() {
         <em>Languages</em>
       </h1>
       <div>
-        <Row text="JavaScript" order={1} level="High" />
-        <Row text="TypeScript" order={2} level="High" />
-        <Row text="Python" order={3} level="Medium" />
-        <Row text="Java" order={4} level="Medium" />
-        <Row text="C/C++" order={5} level="Introductory" />
-        <Row text="Fortran" order={6} level="Introductory" />
+        <Row text="Java" order={1} level="High" />
+        <Row text="JavaScript" order={2} level="High" />
+        <Row text="TypeScript" order={3} level="High" />
+        <Row text="Python" order={4} level="Medium" />
+        <Row text="Kotlin" order={5} level="Introductory" />
       </div>
     </div>
   );
@@ -58,9 +57,11 @@ function WebDevelopment() {
         <em>Web Development</em>
       </h1>
       <div>
-        <Row text="React" order={1} level="High" />
-        <Row text="MERN" order={2} level="High" />
-        <Row text="Websocket" order={4} level="Medium" />
+        <Row text="Guice/Guava" order={1} level="High" />
+        <Row text="React" order={2} level="High" />
+        <Row text="MERN" order={3} level="High" />
+        <Row text="Spring" order={4} level="Medium" />
+        <Row text="Websocket" order={5} level="Medium" />
         <Row text="Three.js" order={6} level="Introductory" />
       </div>
     </div>
@@ -95,8 +96,10 @@ function OtherSkills() {
         <Row text="Github" order={1} level="High" />
         <Row text="Linux" order={2} level="High" />
         <Row text="OOP" order={3} level="Medium" />
-        <Row text="SQL" order={4} level="Medium" />
-        <Row text="Matlab/Scilab" order={5} level="Introductory" />
+        <Row text="AWS" order={4} level="Medium" />
+        <Row text="Docker" order={5} level="Medium" />
+        <Row text="SQL" order={6} level="Medium" />
+        <Row text="Matlab/Scilab" order={7} level="Introductory" />
       </div>
     </div>
   );
